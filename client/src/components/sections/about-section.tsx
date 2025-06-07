@@ -1,5 +1,8 @@
 import { Check } from "lucide-react";
 
+/**
+ * Renders the "About" section with details about DRS Institutes.
+ */
 export default function AboutSection() {
   const features = [
     "IIT-JEE Foundation",
