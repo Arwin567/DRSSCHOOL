@@ -2,6 +2,9 @@ import { Link } from "wouter";
 import { GraduationCap, MapPin, Phone, Mail } from "lucide-react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
+/**
+ * Renders the footer component with school information, quick links, programs, and contact details.
+ */
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-16">
