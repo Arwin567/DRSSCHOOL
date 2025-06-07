@@ -1,6 +1,9 @@
 import { Baby, Book, GraduationCap, University, Palette, Laptop, Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
+/**
+ * Renders an academics section showcasing various educational programs and features.
+ */
 export default function AcademicsSection() {
   const programs = [
     {
