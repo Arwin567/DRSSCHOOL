@@ -10,16 +10,37 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
+/**
+ * Renders a header component with navigation links and mobile menu.
+ *
+ * The header includes a logo, desktop navigation links for Home, About, Programs, Facilities, and Contact,
+ * and a mobile menu that toggles visibility using the `isOpen` state. The active link is highlighted
+ * by changing its text color to school orange. The navigation logic uses the current location from React Router.
+ */
 export default function Header() {
   const [location] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
+  /**
+   * Determines if a given path is active based on the current location.
+   *
+   * The function checks if the provided path matches the current location.
+   * It returns true if:
+   * - The path is exactly "/" and the location is also "/".
+   * - The path is not "/" and the location starts with the given path.
+   * Otherwise, it returns false.
+   *
+   * @param {string} path - The path to check against the current location.
+   */
   const isActive = (path: string) => {
     if (path === "/" && location === "/") return true;
     if (path !== "/" && location.startsWith(path)) return true;
     return false;
   };
 
+  /**
+   * Renders a navigation link with optional styling and active state highlighting.
+   */
   const NavLink = ({ href, children, className = "" }: { href: string; children: React.ReactNode; className?: string }) => (
     <Link href={href} className={`text-gray-700 hover:text-school-orange transition-colors font-medium ${
       isActive(href) ? "text-school-orange" : ""
