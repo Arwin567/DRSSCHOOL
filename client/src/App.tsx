@@ -10,6 +10,9 @@ import Facilities from "@/pages/facilities";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
 
+/**
+ * Defines routes for different pages in the application.
+ */
 function Router() {
   return (
     <Switch>
@@ -23,6 +26,9 @@ function Router() {
   );
 }
 
+/**
+ * Provides the main application component with query client, tooltip provider, toaster, and router.
+ */
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
